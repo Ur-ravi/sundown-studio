@@ -1,0 +1,27 @@
+@media (max-width:450px) {
+    .page1{
+        min-height: 100vh;
+    }
+    nav{
+        position: relative;
+        z-index: 100;
+    }
+     nav img{
+        transition: .4s ease-in;
+        width:25vw ;
+    }
+   .page1 nav .nlinks{
+   display: none;
+   }
+
+   nav h3{
+    margin: 0 10vw;
+    padding: 2vw 5vw;
+    padding-left: 10vw;
+    border: 1px solid #000;
+    border-radius: 15px;
+    display: block;
+    font-size: 5vw;
+   }
+   
+}

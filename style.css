@@ -1,0 +1,645 @@
+@font-face {
+    font-family: "NeueHaasDisplayMediu";
+    src: url(/NeueHaasDisplayMediu.ttf);
+}
+@font-face{
+    font-family: "NeueHaasDisplayXThin";
+    src: url(/NeueHaasDisplayXThin.ttf);
+}
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: "NeueHaasDisplayMediu";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    
+}
+.main{
+    position: relative;
+    z-index: 10;
+}
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+nav{
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+nav .nlinks{
+    display: flex;
+    gap: 30px;
+    font-size: 1rem;
+    padding-right: 10px 20px;
+    
+}
+.nlinks a{
+    border: .5px solid #a8a8a8;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    transition: .4s ;
+    font-weight: 300;
+    font-family: "NeueHaasDisplayXThin";
+    font-weight: 900;
+}
+.nlinks a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 40px;
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+.nlinks a:hover::after{
+    cursor: pointer;
+    bottom: 0;
+    border-radius: 0;
+}
+.nlinks a:hover{
+    color: #fff;
+}
+.page1 img:hover{
+    cursor: pointer;
+
+}
+nav h3{
+    display: none;
+}
+.center{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom:1px solid #797979 ;
+   
+}
+.center .left{
+    width: 30%;
+}
+.left h3{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-bottom: 2vw;
+}
+
+.right h1{
+    font-size: 12vw;
+    font-weight: 900;
+    letter-spacing: -.05em;
+    line-height: 9rem;
+    text-align: right;
+    padding-bottom: 2vw;
+}
+.page1 video{
+    position: relative;
+    margin-top: 3vw; 
+    width: 100%;
+    border-radius: 30px;
+}
+.hero-shape{
+    position: absolute;
+    top: 94vh;
+    right: 0;
+    width: 45vw;
+    height: 50vh; 
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: orangered;
+   filter: blur(20px);
+}
+.shape1{
+    position: absolute;
+    width:30vw;
+    height:30vw;
+    filter: blur(20px);
+    border-radius: 50%;
+    background-color: orangered;
+    border-radius: 50%;
+overflow: hidden;
+    animation-name: anime3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.shape2{
+    position: absolute;
+    right: 0;
+    width:30vw;
+    height:30vw;
+    filter: blur(10px);
+    background-color: orangered;
+    border-radius: 50%;
+    /* ANIMATION */
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.shape3{
+    position: absolute;
+    right: 40%;
+    width:30vw;
+    height:30vw;
+    filter: blur(15px);
+    background: linear-gradient(orangered,rgb(255, 94, 0));
+    border-radius: 50%;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(-20%,20%);
+    }
+    to{
+        transform: translate(20%,-15%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(-20%,10%);
+    }
+    to{
+        transform: translate(-10%,-10%);
+    }
+}
+@keyframes anime3 {
+    from{
+        transform: translate(-10%,30%);
+    }
+    to{
+        transform: translate(20%,-20%);
+    }
+}
+
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 8vw ;
+    background-color: #EFEAE3;
+    position: relative;
+}
+.moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.moving-text::-webkit-scrollbar{
+    display: none;
+}
+.cont{
+    animation: moveText 10s linear  infinite ;
+ white-space: nowrap;
+ display: inline-block;
+}
+.moving-text h1{
+    font-size: 8rem;
+    display: inline-block;
+}
+.gola{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes moveText {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.page2-bottom{
+    position: relative;
+    margin-top: 9vw;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6vw;
+}
+.page2-bottom h1{
+    font-size: 4.5vw;
+    text-align: left;
+    width: 60%;
+    line-height: 4.5vw;
+    letter-spacing: -2px;
+    z-index: 9; 
+}
+.card img{
+    width: 100%;
+    height:30vh ;
+    border-radius: 10px;
+}
+.card{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 20vw;
+    height: 60vh;
+    border-radius: 10px;
+}
+.card p{
+    margin: 3vw 0;
+    line-height: 1.6vw;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "NeueHaasDisplayXThin";
+}
+.page2circle{
+    width: 35vw;
+    height: 65vh;
+    background: linear-gradient(to top , #ff4400, #ff6709);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    
+    animation: page2cir 5s linear  infinite alternate ;
+}
+@keyframes page2cir {
+    from{
+        filter: blur(15px);
+        transform: translate(10%,-10%) skew(4deg);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-20%,10%) skew(-12deg);
+    }
+}
+.pageText{
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5vw;
+
+}
+.pageText p{
+    font-family: "NeueHaasDisplayXThin";
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-bottom: vw;
+    font-size: 14px;
+}
+.pageText .circle{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+.element{
+    width: 100%;
+    height: 20%;
+    border-bottom:1px solid #848484 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 2vw;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in-out .4s;
+
+}
+.element h2{
+    font-size: 3.2vw;
+    z-index: 9;
+}
+.element .elemText{
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+    z-index: 999;
+}
+.elemText h5{
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: "NeueHaasDisplayXThin";
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.elemText p{
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: "NeueHaasDisplayXThin";
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 22px;
+    color: #717171;
+}
+.element .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 146, 23);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease-in-out .3s;
+   
+}
+.element:hover .overlay{
+    top: 0;
+  cursor: pointer;
+}
+
+.fixed-image{
+    width: 25vw;
+    height: 65vh;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 999;
+    top: 20%;
+    left: 50%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
+.page3btn{
+    width: 15%;
+    height: 30vh;
+    padding: 4vw 2vw;
+}
+.page3btn .btn{
+    padding: 1.3vw 2.5vw;
+    border-radius: 40px;
+    border: 1px solid #909090;
+    position: relative;
+    overflow: hidden;
+}
+.btn p{
+    font-size: 14px;
+    font-weight: 900;
+    font-family: "NeueHaasDisplayXThin";
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+.btn::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transition: .3s ease-in-out;
+    /* z-index: -1; */
+    color: #fff;
+    border-radius: 50%;
+}
+.btn:hover::after{
+    cursor: pointer;
+    bottom: 0;
+    border-radius: 10%;
+}
+.btn p:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.page4{
+    width: 100%;
+    height: 50vh;
+    background-color:#EFEAE3;
+}
+.page5{
+    width: 100%;
+   height: 100vh;
+}
+
+
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+  .swiper-slide {
+    width: 20%;
+    height: 35vh;
+    border-left:1px solid #9d9d9dda ;
+    padding: 2vw 2vw ;
+    font-size: 1.2vw;
+}
+
+.page6{
+    padding: 2vw;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#EFEAE3;
+    
+}
+.pleft{
+    width: 45%;
+    height: 100vh;
+    background-color: #000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    padding-left: 10vw;
+    padding-top: 8vw;
+}
+.pright{
+    width: 55%;
+    height: 100vh;background-image: url(/hover2.webp);
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pleft h1{
+    color: #fff;
+    font-size: 5vw;
+    line-height: 5vw;
+}
+.pleft p{
+    padding-top: 2vw;
+    width: 70%;
+    color: #fff;
+    line-height: 1.6vw;
+    font-family: "NeueHaasDisplayXThin";
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+            /* LAST PAGE OF THIS WEBSITE */
+
+
+.footer {
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    position: fixed;
+    background-color: #000;
+    color: #fff;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    flex-direction: column;
+}
+.footer h1{
+    font-size: 19vw;
+    padding-bottom: 2vw;
+}
+
+.fbox1{
+    font-size: 2rem;
+    position: absolute;
+    top: 26%;
+    left: 7%;
+}
+.fbox1 ul li{
+    list-style: none;
+
+}
+.fbox2{
+    width: 25%;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20%;
+   right: 3%;
+
+}
+.fbox2 input{
+    padding-top: 5vw;
+    border: none;
+    border-bottom: 1px solid #aeaeae;
+    background: transparent;
+    font-size: 1rem;
+    z-index: 10;
+    
+}
+.fbox3{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #8f8e8e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 2vw;
+}
+.gooye{
+    width: 100%;
+    height: 30vh;
+    background-color: #ff4400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(15px);
+    animation: gooye 3s linear  infinite alternate ;
+    display: flex;
+    justify-content: space-between;
+
+}
+@keyframes gooye {
+    from{
+        filter: blur(35px);
+        transform: translateY(10%,-10%) skew(40deg);
+    }
+    to{
+        filter: blur(30px);
+        transform: translateY(-20%,10%) skew(-12deg);
+    }
+}
+.gooye1{
+    position: absolute;
+    top: 10%;
+    left: -20%;
+    width: 40%;
+    height: 40vh;
+    border-radius: 50%;
+    background:linear-gradient(#ff4400,#fb5d23);
+    animation: gcir 4s linear  infinite  alternate;
+}
+.gooye2{   
+     position: absolute;
+    top: 10%;
+    right: -20%;
+    width: 30%;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: #ff4400;
+    animation: gcir 4s linear  infinite  alternate;
+}
+.gooye3{   
+    position: absolute;
+   top: 5%;
+   right: 5%;
+   width: 20%;
+   height: 40vh;
+   border-radius: 50%;
+   background-color: #ff4400;
+   animation: gcir 4s linear  infinite  alternate;
+}
+@keyframes gcir {   
+    from{
+        transform: translateX(10%,-20%) skew(40deg);
+
+    }
+    to{
+        transform: translate(-10%,20%) skew(-12deg);
+    }
+    
+}
+
+.navHover{
+    width: 100%;
+    height: 100vh;
+    background-color: #00000067;
+    position: fixed;
+    top: -100%; 
+    z-index: 99;
+    transition:.8s ease-in-out ;
+}
